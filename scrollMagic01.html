@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body style="height: 2000px;">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+
+<div>ref: https://github.com/janpaepke/ScrollMagic/wiki/Getting-Started-:-How-to-use-ScrollMagic</div>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<div id="o1">1</div>
+<div id="o2">2</div>
+<div id="o3">3</div>
+
+<script type="text/javascript">
+    //
+    var controller = new ScrollMagic.Controller();
+
+
+    //
+    var scene = new ScrollMagic.Scene({
+        offset: 50,        // start scene after scrolling for 100px
+        duration: 100       // pin the element for 400px of scrolling
+    }).setPin('#o1');       // This will add #o1 DOM Height 400px.
+
+
+    //
+    controller.addScene(scene);
+</script>
+</body>
+</html>

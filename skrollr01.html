@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<style type="text/css">
+    body {
+        color: silver;
+    }
+</style>
+<body>
+
+<!-- Document Mode/Absolute Mode: DATA-[OFFSET]-[ANCHOR] -->
+<!-- <div data-0="background-color:rgb(0,0,255);transform:rotate(0deg);" data-500="background-color:rgb(255,0,0);transform:rotate(360deg);">WOOOT#1</div> -->
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<!-- Relative Mode/Viewport Mode: DATA-[OFFSET]-[ANCHOR] -->
+<!-- data-200-top-top="background-color:rgb(0,255,255);font-size:1em;" -->
+<!-- 
+    data-100-top-top="background-color:rgb(0,0,255);font-size:1.5em;"
+    data-200-top-bottom="background-color:rgb(255,0,0);font-size:1em;"
+    data-100-top-bottom="background-color:rgb(0,255,0);"
+ -->
+<div
+    id="obj-1"
+    data-0-top-top="background-color:rgb(0,0,255);font-size:1.5em;"
+    data-0-center-center="background-color:rgb(125,125,125);font-size:1em;"
+    data-0-bottom-bottom="background-color:rgb(0,255,255);font-size:1em;"
+    >
+    <p>data-100-top-top="background-color:rgb(0,0,255);"<p>
+    <p>此 dom 的 top offset 對齊 viewport 的 top 超過 100px 的時候套用此規則<p>
+    <p>data-200-top-bottom="background-color:rgb(255,0,0);"</p>
+    <p>此 dom 的 top offset 對齊 viewport 的 bottom 超過 200px 的時候套用此規則<p>
+</div>
+     
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+<script type="text/javascript">
+    var s = skrollr.init(); //初始化
+</script>
+</body>
+
+</html>
