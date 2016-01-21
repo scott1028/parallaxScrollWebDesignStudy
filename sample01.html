@@ -64,9 +64,18 @@
 
             // relative obj
             // 利用 getBoundingClientRect() & window.innerHeight 座標判定物件是否已進入場景
+            // 可以利用 window.innerHiehgt & .getBoundingClientRect().top & getBoundingClientRect().bottom 算出進入場景的進度百分比
             var obj3 = $('[parallax-obj="3"]');
             if(obj3[0].getBoundingClientRect().bottom <= window.innerHeight - 100 && obj3[0].getBoundingClientRect().top >= 100){
-                obj3.text('active');
+
+                // 放大 <--> 縮小
+                if(obj3[0].getBoundingClientRect().top < window.innerHeight / 2){
+                    obj3.text('active=> ' + parseInt(obj3[0].getBoundingClientRect().top * 100 / window.innerHeight));
+                }
+                else{
+                    obj3.text('active=> ' + parseInt( (1 - obj3[0].getBoundingClientRect().top / window.innerHeight) * 100 ));
+                }
+
                 obj3.css('font-size', '3em').css('text-align', 'center');
             }
             else{
