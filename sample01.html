@@ -71,9 +71,15 @@
                 // 放大 <--> 縮小
                 if(obj3[0].getBoundingClientRect().top < window.innerHeight / 2){
                     obj3.text('active=> ' + parseInt(obj3[0].getBoundingClientRect().top * 100 / window.innerHeight));
+
+                    // var r = (parseInt(obj3[0].getBoundingClientRect().top * 100 / window.innerHeight) / 100 + 1);
+                    // $('[parallax-obj="3"]').css('transform', 'scale(' + r + ',' + r + ')');
                 }
                 else{
                     obj3.text('active=> ' + parseInt( (1 - obj3[0].getBoundingClientRect().top / window.innerHeight) * 100 ));
+
+                    // var r = parseInt( (1 - obj3[0].getBoundingClientRect().top / window.innerHeight) * 100 ) / 100 + 1;
+                    // $('[parallax-obj="3"]').css('transform', 'scale(' + r + ',' + r + ')');
                 }
 
                 obj3.css('font-size', '3em').css('text-align', 'center');
@@ -91,14 +97,14 @@
     });
 </script>
 <body style="padding-left: 20%; padding-right: 20%; margin: 0px;">
+    <div parallax-obj="1" data-start-y="0" data-end-y="2200" style="font-size: 20pt; background-color: red; height: 400px; position: fixed; width: 60%;">
+        7
+    </div>
+    <div parallax-obj="2" data-start-y="2200" data-end-y="5000" style="background-color: blue; color: yellow; text-align: center; z-index: 99; position: fixed; width: 60%;">
+        Test
+    </div>
     <div style="font-size: 20pt; position: relative;" parallax-scene>
-        <div parallax-obj="1" data-start-y="0" data-end-y="2200" style="font-size: 20pt; background-color: red; height: 400px; position: fixed; width: 60%;">
-            7
-        </div>
-        <div parallax-obj="2" data-start-y="2200" data-end-y="5000" style="background-color: blue; color: yellow; text-align: center; z-index: 99; position: fixed; width: 60%;">
-            Test
-        </div>
-        <div parallax-scene style="top: 400px;">
+        <div style="top: 400px;">
             #License
 
             ScrollMagic is dual licensed under the terms of the MIT license (below) and the [GPL](http://www.gnu.org/licenses/gpl-3.0.html).
